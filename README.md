@@ -1,49 +1,58 @@
-# Huananzhi F8 + Intel Xeon E5-26XX v3 + RX 580 8Gb
+# Amentmen x99 + Xeon E5-26xx + GTX 1060 3GB
 
-**Latest working macOS**: 13.0.1
+**Latest working macOS**: 14.7
 <br>
 **Current OpenCore**: 0.8.6
 
 ## Complete hardware specs
-- Intel Xeon E5-26XX v3 (HEDT Haswell)
-- Huananzhi F8 - 2021 Version
-- AMD RX 580 8 Gb (Polaris)
-- Áudio Codec: Realtek ALC883
-- Ethernet: Realtek RTL8168/8111 PCI-E Gigabit
+- Intel Xeon E5-2680 v3
+- Amentmen x99 
+- Nvidia GTX 1060 3GB
+- Áudio Codec: Realtek ALC662
+- Ethernet: Realtek® 8111F
 
 ## What works
-- macOS Ventura, Big Sur, macOS Catalina and macOS Monterey
-- Audio
-- HDMI/DP
-- All USB ports
-- Ethernet
-- Everything iCloud related (Drive, iMessage, Facetime, unlock with Apple Watch, etc)
-- Temperature monitoring for everything except GPU (no GPU temp support in VirtualSMC for navi and big navi cards)
-- DRM content (Netflix, ATV+, Airplay 2 mirroring etc)
-- Shutdown/Reboot/Update to newer macOS builds over time
+* Graphics: Nvidia GTX 1060 via OCLP (There are some issues with transparency, but most of the time they look normal)
+* Dual monitor setup DP + DVI @ 165HZ (although some animations are not that smooth due to lack of Metal 2 support)
+* USB
+* USB Audio
+* Sleep
+* Speakers
+* Microphone
+* Ethernet
+* AirDrop
+* Apple Services
+
+## Unknown (Didn’t test)：
+
+* Wi-Fi
+* Bluetooth
+* HDMI Audio
+* Onboard audio
+* Siri
+* Overclocking
+
+## Known issues：
+
+* Anydesk crashes on connect from other device to hackintosh,  haven’t found fix yet. Connecting from hackintosh to other devices works correctly. 
 
 ## What doesn't work
 - Correct USB Mapping :(
 
 ## Kexts used:
-- AppleALC.kext - [version 1.7.6](https://github.com/acidanthera/AppleALC/releases/tag/1.7.6)
-- CpuTscSync.kext - [version 1.0.9](https://github.com/acidanthera/CpuTscSync/releases/tag/1.0.9)
-- Lilu.kext - [version 1.6.2](https://github.com/acidanthera/Lilu/releases/tag/1.6.2)
-- RealtekRTL8111.kext - [version 2.4.2](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/2.4.2)
-- SMCProcessor.kext - [version 1.3.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.0)
-- SMCSuperIO.kext - [version 1.3.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.0)
-- VirtualSMC.kext - [version 1.3.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.0)
-- WhateverGreen.kext - [version 1.6.1](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.1)
-- XHCI-unsupported.kext - [version 0.9.2](https://github.com/RehabMan/OS-X-USB-Inject-All/tree/master/XHCI-unsupported.kext)
-
-## Geekbench Results:
-- https://browser.geekbench.com/v5/cpu/12101653
-- https://browser.geekbench.com/v5/compute/4059294
-- https://browser.geekbench.com/v5/compute/4059295
+- AppleALC.kext 
+- CpuTscSync.kext
+- Lilu.kext
+- RealtekRTL8111.kext
+- RestrictEvents.kext
+- SMCProcessor.kext 
+- SMCSuperIO.kext
+- UTBMAP.kext
+- USBToolBox.kext
+- VirtualSMC.kext 
+- WhateverGreen.kext 
+- XHCI-unsupported.kext 
 
 ## Thanks/Credits
 - [Opencore Team](https://dortania.github.io/getting-started/)
 - [BASE EFI Intel Haswell-E (HEDT)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-HEDT-4THGEN-X99-HASWELL-E)
-
-## Discord - Universo Hackintosh
-- [Access Discord](https://discord.universohackintosh.com.br)
